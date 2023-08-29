@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,11 @@
     </div>
     
     <script type="text/javascript" charset="utf-8">
-        document.getElementsByTagName("meta")[1].remove();
-        //document.querySelector("[name='viewport']").remove()
+        // document.getElementsByTagName("meta")[1].remove();
+        // document.querySelector("[name='viewport']").remove()
+        var viewportMetaTag = document.querySelector('meta[name="viewport"]'); // Remove the viewport meta tag if it exists if 
+        (viewportMetaTag) {
+            viewportMetaTag.parentNode.removeChild(viewportMetaTag); }
     </script>
 </body>
 
