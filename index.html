@@ -22,11 +22,34 @@
     <script type="text/javascript" charset="utf-8">
         // document.getElementsByTagName("meta")[1].remove();
         // document.querySelector("[name='viewport']").remove()
-        var metaTag = document.querySelector('meta[name="viewport"]');
+        /*var metaTag = document.querySelector('meta[name="viewport"]');
         if (metaTag) {
             metaTag.remove();
-            
+        }*/
+        
+        // Identify the meta tag using its attributes
+        var targetName = "viewport";
+        var targetContent = "width=device-width, initial-scale=1.0";
+        
+        // Find the meta tag element in the DOM
+        var metaTags = document.getElementsByTagName("meta");
+        var targetMetaTag = null;
+        
+        for (var i = 0; i < metaTags.length; i++) {
+            var name = metaTags[i].getAttribute("name");
+            var content = metaTags[i].getAttribute("content");
+        
+            if (name === targetName && content === targetContent) {
+                targetMetaTag = metaTags[i];
+                break;
+            }
         }
+        
+        // Remove the meta tag element
+        if (targetMetaTag) {
+            targetMetaTag.parentNode.removeChild(targetMetaTag);
+        }
+
 
     </script>
 </body>
