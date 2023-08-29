@@ -22,10 +22,12 @@
     <script type="text/javascript" charset="utf-8">
         // document.getElementsByTagName("meta")[1].remove();
         // document.querySelector("[name='viewport']").remove()
-        var viewportMetaTag = document.querySelector('meta[name="viewport"]'); // Remove the viewport meta tag if it exists if 
-        (viewportMetaTag) {
-            viewportMetaTag.parentNode.removeChild(viewportMetaTag);
+        var metaTag = document.querySelector('meta[name="name_of_meta_tag"]');
+        if (metaTag) {
+            metaTag.remove();
+            
         }
+
     </script>
 </body>
 
