@@ -23,10 +23,10 @@
         // document.getElementsByTagName("meta")[1].remove();
         // document.querySelector("[name='viewport']").remove()
         
-        const metaTags = document.querySelectorAll('meta');
-        metaTags.forEach((metaTag) => { 
-            metaTag.remove();
-        });
+        var metaTagToRemove = document.querySelector('meta[name="viewport"]');
+        if (metaTagToRemove) {
+            metaTagToRemove.remove(); 
+        }
     </script>
 </body>
 
