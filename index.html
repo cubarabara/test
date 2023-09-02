@@ -3,7 +3,7 @@
 
 <head>
     <title>Document</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <style type="text/css" media="all">
         .test1 {
             background: red;
@@ -25,8 +25,8 @@
         var meta = document.createElement('meta');
         
         // Set the attributes for the meta tag
-        meta.setAttribute('name', 'description');
-        meta.setAttribute('content', 'Your meta tag content here');
+        meta.setAttribute('name', 'viewport');
+        meta.setAttribute('content', 'width=1024, height=768');
         
         // Append the meta tag to the document's head
         document.head.appendChild(meta);
