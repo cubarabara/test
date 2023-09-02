@@ -21,10 +21,16 @@
     
     <script type="text/javascript" charset="utf-8">
         // document.querySelector("[name='viewport']").setAttribute("content", "width=1024, height=768");
+        // Create a new meta element
         var meta = document.createElement('meta');
-        meta.httpEquiv = "X-UA-Compatible111111";
-        meta.content = "IE=edge";
+        
+        // Set the attributes for the meta tag
+        meta.setAttribute('name', 'description');
+        meta.setAttribute('content', 'Your meta tag content here');
+        
+        // Append the meta tag to the document's head
         document.head.appendChild(meta);
+
     </script>
 </body>
 
